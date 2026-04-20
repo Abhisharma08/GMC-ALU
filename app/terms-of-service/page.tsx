@@ -1,44 +1,149 @@
 import React from "next";
 
 export const metadata = {
-  title: "Terms of Service | Paradise Furniture",
-  description: "Terms and conditions of using Paradise Furniture online services.",
+  title: "Terms of Service | Alu Empire",
+  description: "Terms and conditions of using Alu Empire online services.",
 };
 
 export default function TermsOfService() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 font-sans">
-      <h1 className="text-4xl font-extrabold text-gray-900 mb-8">Terms of Service</h1>
-      
-      <div className="prose prose-lg text-gray-600 max-w-none space-y-6">
-        <p><strong>Last Updated: {new Date().toLocaleDateString()}</strong></p>
+    <div className="bg-white text-gray-700 min-h-screen"> {/* ✅ white bg */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 font-sans">
         
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
-        <p>
-          By accessing and using the Paradise Furniture website ("Site") or submitting an order through our system, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our site.
-        </p>
+        <h1 className="text-4xl font-extrabold text-black mb-8">
+          Terms of Service
+        </h1>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Orders and Pricing</h2>
-        <p>
-          Since we specialize in B2B and dedicated fulfillment, all "orders" placed on this website act as a binding quote request and purchase intent. Payment will be collected offline securely via invoice or upon delivery. We reserve the right to cancel any order if there are logistical constraints or pricing errors. Prices are subject to change without prior notice.
-        </p>
+        <div className="prose prose-lg max-w-none space-y-6 
+                        prose-headings:text-black 
+                        prose-p:text-gray-700 
+                        prose-strong:text-black
+                        prose-a:text-orange-500">
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Product Descriptions</h2>
-        <p>
-          We strive to ensure that our product descriptions, features, and images are as accurate as possible. However, due to the nature of handcrafted premium furniture, slight variations in color, texture, or finish may occur. These variations do not constitute product defects.
-        </p>
+          <p>
+            <strong>Last Updated: {new Date().toLocaleDateString()}</strong>
+          </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Limitation of Liability</h2>
-        <p>
-          Paradise Furniture shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use our products or services.
-        </p>
+          {/* Acceptance */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            1. Acceptance of Terms
+          </h2>
+          <p>
+            By accessing and using the Alu Empire website ("Site"), you agree to
+            comply with and be bound by these Terms and Conditions. If you do not
+            agree, please do not use our site.
+          </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Contact Information</h2>
-        <p>
-          If you have any questions regarding these Terms of Service, please contact us at: <br/>
-          <strong>Email:</strong> support@paradisefurniture.com<br/>
-          <strong>Phone:</strong> +91 98765 43210
-        </p>
+          {/* Interpretation */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            2. Interpretation
+          </h2>
+          <p>
+            The words of which the initial letter is capitalized have meanings
+            defined under the following conditions. These definitions shall have
+            the same meaning regardless of singular or plural.
+          </p>
+
+          {/* Definitions */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            3. Definitions
+          </h2>
+
+          <p><strong>Affiliate:</strong> Entity under common control (50%+ ownership).</p>
+          <p><strong>Country:</strong> Haryana, India</p>
+          <p><strong>Company:</strong> Alu Empire</p>
+          <p><strong>Device:</strong> Computer, mobile, or tablet.</p>
+          <p><strong>Service:</strong> Website</p>
+          <p><strong>Website:</strong> https://www.aluempire.com/</p>
+
+          {/* Acknowledgment */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            4. Acknowledgment
+          </h2>
+          <p>
+            These Terms govern the use of the Service and form an agreement between
+            you and the Company.
+          </p>
+          <p>
+            By using the Service, you agree to be bound by these Terms.
+          </p>
+          <p>You must be at least 18 years old to use this Service.</p>
+
+          {/* Links */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            5. Links to Other Websites
+          </h2>
+          <p>
+            Our Service may contain links to third-party websites. We are not
+            responsible for their content or policies.
+          </p>
+
+          {/* Termination */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            6. Termination
+          </h2>
+          <p>
+            We may terminate or suspend access immediately if you violate these
+            Terms.
+          </p>
+
+          {/* Liability */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            7. Limitation of Liability
+          </h2>
+          <p>
+            Liability is limited to the amount paid by you or up to $100 if no
+            purchase has been made.
+          </p>
+          <p>
+            We are not responsible for indirect or consequential damages including
+            loss of data, profits, or business interruption.
+          </p>
+
+          {/* Governing Law */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            8. Governing Law
+          </h2>
+          <p>
+            These Terms are governed by the laws of Haryana, India.
+          </p>
+
+          {/* Disputes */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            9. Disputes Resolution
+          </h2>
+          <p>
+            Any disputes should first be resolved informally by contacting us.
+          </p>
+
+          {/* Translation */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            10. Translation Interpretation
+          </h2>
+          <p>
+            If translated, the English version will prevail in case of dispute.
+          </p>
+
+          {/* Changes */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            11. Changes to Terms
+          </h2>
+          <p>
+            We may update these Terms at any time. Continued use means acceptance.
+          </p>
+
+          {/* Contact */}
+          <h2 className="text-2xl font-bold mt-8 mb-4 text-black">
+            12. Contact Information
+          </h2>
+          <p>
+            If you have any questions, contact us at:
+            <br />
+            <strong>Email:</strong> 
+            <span className="text-orange-500"> info@aluempire.com</span>
+          </p>
+
+        </div>
       </div>
     </div>
   );

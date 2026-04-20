@@ -16,7 +16,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Paradise Furniture",
+  title: "Alu Empire Skirting",
   description: "Curated collection of premium chairs.",
 };
 

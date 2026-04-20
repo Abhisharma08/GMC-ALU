@@ -89,56 +89,56 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
         <div className="space-y-4">
           <div>
             <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
-              Full Name <span className="text-red-500">*</span>
+              Full Name <span className="text-[#FF6A13]">*</span>
             </label>
             <input
               type="text"
               id="fullName"
               name="fullName"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF6A13] focus:border-transparent transition-all outline-none"
               placeholder="John Doe"
             />
           </div>
 
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-              Email Address <span className="text-red-500">*</span>
+              Email Address <span className="text-[#FF6A13]">*</span>
             </label>
             <input
               type="email"
               id="email"
               name="email"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF6A13] focus:border-transparent transition-all outline-none"
               placeholder="john@example.com"
             />
           </div>
 
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-              Phone Number <span className="text-red-500">*</span>
+              Phone Number <span className="text-[#FF6A13]">*</span>
             </label>
             <input
               type="tel"
               id="phone"
               name="phone"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF6A13] focus:border-transparent transition-all outline-none"
               placeholder="+1 (555) 000-0000"
             />
           </div>
 
           <div>
             <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
-              City <span className="text-red-500">*</span>
+              City <span className="text-[#FF6A13]">*</span>
             </label>
             <input
               type="text"
               id="city"
               name="city"
               required
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF6A13] focus:border-transparent transition-all outline-none"
               placeholder="E.g. New York, Bangalore..."
             />
           </div>
@@ -152,7 +152,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex justify-center items-center h-12 disabled:opacity-70 disabled:cursor-not-allowed mt-2"
+            className="w-full bg-[#FF6A13] hover:bg-[#E65A00] text-white font-semibold py-3 px-6 rounded-lg transition-colors flex justify-center items-center h-12 disabled:opacity-70 disabled:cursor-not-allowed mt-2"
           >
             {status === "submitting" ? (
               <>

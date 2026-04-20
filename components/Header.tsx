@@ -6,15 +6,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <img 
-            src="https://res.cloudinary.com/dfb0umklg/images/c_scale,w_170,h_42,dpr_1.5/f_auto,q_auto/v1/paradisefurniture.in/wp-content/uploads/elementor/thumbs/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74.png?_i=AA"
-            alt="Paradise Furniture Logo"
+            src="https://res.cloudinary.com/demfgmwjk/image/upload/v1776537039/Alu_Empire_Logo-removebg-preview_nrlo91_fslx1w.png"
+            alt="alu empire Logo"
             className="h-10 md:h-12 w-auto object-contain"
           />
         </Link>
         <div className="hidden sm:flex items-center space-x-8 text-sm font-medium text-gray-700">
-          <Link href="/" className="hover:text-red-700 transition-colors">Collections</Link>
-          <Link href="#about" className="hover:text-red-700 transition-colors">About Us</Link>
-          <Link href="#contact" className="hover:text-red-700 transition-colors">Contact</Link>
+          <Link href="/#collection" className="hover:text-[#FF6A13] transition-colors">Collections</Link>
+          <Link href="/about-us" className="hover:text-[#FF6A13] transition-colors">About Us</Link>
+          <Link href="/contact-us" className="hover:text-[#FF6A13] transition-colors">Contact</Link>
         </div>
       </div>
     </header>
