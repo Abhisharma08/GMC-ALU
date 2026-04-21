@@ -9,50 +9,50 @@ interface ProductGalleryProps {
   availability: string;
 }
 
-export default function ProductGallery({ title, gallery, availability }: ProductGalleryProps) {
+export default function ProductGallery({
+  title,
+  gallery,
+  availability,
+}: ProductGalleryProps) {
   const [mainImage, setMainImage] = useState(gallery[0]);
 
   return (
-    <div className="relative w-full flex flex-col mb-10 lg:mb-0 lg:sticky lg:top-8">
-      
-      {/* Main Image */}
-      <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100">
+    <div className="relative w-full flex flex-col mb-8 sm:mb-10 lg:mb-0 lg:sticky lg:top-8">
+      <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-white border border-gray-100">
         <Image
           src={mainImage}
           alt={title}
           fill
-          className="object-contain p-4 transition-opacity duration-300" 
-          // ✅ FIXED (cover → contain)
+          className="object-contain p-4 transition-opacity duration-300"
         />
 
-        {/* In Stock Badge */}
-        <div className="absolute top-4 left-4 bg-gray-900 text-white px-4 py-1.5 rounded-full text-sm font-bold tracking-wide shadow-md flex items-center">
-          <span className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse"></span>
+        <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-gray-900 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold tracking-wide shadow-md flex items-center">
+          <span className="w-2 h-2 rounded-full bg-white mr-2 animate-pulse" />
           {availability}
         </div>
       </div>
-      
-      {/* Thumbnail Gallery */}
+
       {gallery.length > 1 && (
-        <div className="mt-6 grid grid-cols-3 gap-4">
+        <div className="mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
           {gallery.map((imgUrl, idx) => (
-            <div 
-              key={idx} 
+            <button
+              key={imgUrl}
+              type="button"
               onClick={() => setMainImage(imgUrl)}
-              className={`rounded-xl overflow-hidden h-28 relative border-2 cursor-pointer transition-all duration-200 ${
-                mainImage === imgUrl 
-                  ? 'border-[#FF6A13] ring-2 ring-[#FF6A13]/20 shadow-md scale-[1.02]' 
-                  : 'border-gray-200 opacity-70 hover:opacity-100 hover:border-gray-300'
+              className={`rounded-xl overflow-hidden h-24 sm:h-28 relative border-2 cursor-pointer transition-all duration-200 ${
+                mainImage === imgUrl
+                  ? "border-[#FF6A13] ring-2 ring-[#FF6A13]/20 shadow-md scale-[1.02]"
+                  : "border-gray-200 opacity-70 hover:opacity-100 hover:border-gray-300"
               }`}
+              aria-label={`Show ${title} view ${idx + 1}`}
             >
-              <Image 
-                src={imgUrl} 
-                alt={`${title} view ${idx + 1}`} 
-                fill 
-                className="object-contain bg-white p-2" 
-                // ✅ FIXED here also
+              <Image
+                src={imgUrl}
+                alt={`${title} view ${idx + 1}`}
+                fill
+                className="object-contain bg-white p-2"
               />
-            </div>
+            </button>
           ))}
         </div>
       )}

@@ -1,5 +1,3 @@
-import React from "next";
-
 export const metadata = {
   title: "Terms of Service | Alu Empire",
   description: "Terms and conditions of using Alu Empire online services.",
@@ -29,7 +27,7 @@ export default function TermsOfService() {
             1. Acceptance of Terms
           </h2>
           <p>
-            By accessing and using the Alu Empire website ("Site"), you agree to
+            By accessing and using the Alu Empire website (&quot;Site&quot;), you agree to
             comply with and be bound by these Terms and Conditions. If you do not
             agree, please do not use our site.
           </p>

@@ -1,140 +1,109 @@
 export const metadata = {
   title: "Privacy Policy | Alu Empire",
-  description: "How Alu Empire handles your data.",
+  description: "How Alu Empire collects, uses, and protects customer data.",
 };
 
 export default function PrivacyPolicy() {
   return (
-    <div className="bg-white text-gray-700 min-h-screen"> {/* ✅ white bg */}
+    <div className="bg-white text-gray-700 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 font-sans">
-        
         <h1 className="text-4xl font-extrabold text-black mb-8">
           Privacy Policy
         </h1>
 
-        <div
-          className="prose prose-lg max-w-none space-y-6 
-                     prose-headings:text-black 
-                     prose-p:text-gray-700
-                     prose-strong:text-black
-                     prose-li:text-gray-700
-                     prose-a:text-orange-500"
-        >
-
-          <p><strong>Last Updated: {new Date().toLocaleDateString()}</strong></p>
-
+        <div className="prose prose-lg max-w-none space-y-6 prose-headings:text-black prose-p:text-gray-700 prose-strong:text-black prose-li:text-gray-700 prose-a:text-orange-500">
           <p>
-            Please read these terms and conditions carefully before using Our Service.
-          </p>
-
-          {/* Interpretation */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Interpretation</h2>
-          <p>
-            The words of which the initial letter is capitalized have meanings defined under the following conditions. 
-            The following definitions shall have the same meaning regardless of whether they appear in singular or plural.
-          </p>
-
-          {/* Definitions */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Definitions</h2>
-
-          <p><strong>Affiliate:</strong> means an entity that controls, is controlled by or is under common control with a party.</p>
-          <p><strong>Country:</strong> Haryana, India</p>
-          <p><strong>Company:</strong> Alu Empire</p>
-          <p><strong>Device:</strong> Any device such as computer, mobile or tablet.</p>
-          <p><strong>Service:</strong> Website</p>
-          <p><strong>Terms and Conditions:</strong> Agreement between you and the Company.</p>
-          <p><strong>Website:</strong> https://www.aluempire.com/</p>
-
-          {/* Acknowledgment */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Acknowledgment</h2>
-
-          <p>
-            These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company.
+            <strong>Last Updated: 21-04-2026</strong>
           </p>
 
           <p>
-            By accessing or using the Service You agree to be bound by these Terms and Conditions.
+            Alu Empire respects your privacy and is committed to protecting the
+            personal information you share with us through this website.
           </p>
 
+          <h2>1. Information We Collect</h2>
+          <p>We may collect the following information when you submit an enquiry or place an order request:</p>
+          <ul>
+            <li>Full name</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>City and delivery-related details</li>
+            <li>Product and quantity preferences</li>
+          </ul>
+
+          <h2>2. How We Use Your Information</h2>
+          <p>Your information is used to:</p>
+          <ul>
+            <li>Respond to product enquiries and order requests</li>
+            <li>Coordinate quotations, dispatch, and offline payment follow-up</li>
+            <li>Provide customer service and installation-related communication</li>
+            <li>Maintain internal sales and fulfilment records</li>
+          </ul>
+
+          <h2>3. How Your Information Is Stored</h2>
           <p>
-            You must be at least 18 years old to use this Service.
+            Enquiry data submitted through the website is processed on the server
+            and stored in Alu Empire&apos;s connected Google Workspace spreadsheet
+            for internal business use.
           </p>
 
+          <h2>4. Data Sharing</h2>
           <p>
-            Your use of the Service is also subject to the Privacy Policy.
+            We do not sell or rent your personal information. We may share it
+            only with internal team members, logistics partners, installation
+            partners, or service providers when required to fulfil your request.
           </p>
 
-          {/* Links */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Links to Other Websites</h2>
-
+          <h2>5. Cookies and Analytics</h2>
           <p>
-            Our Service may contain links to third-party websites that are not owned or controlled by the Company.
+            This website may use analytics, cookies, or tracking tools to
+            understand traffic, measure conversions, and improve the buying
+            experience.
           </p>
 
+          <h2>6. Data Retention</h2>
           <p>
-            The Company has no control over third-party websites and assumes no responsibility for them.
+            We retain submitted information only for as long as it is needed for
+            enquiry handling, sales coordination, legal compliance, and internal
+            business records.
           </p>
 
-          {/* Termination */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Termination</h2>
-
+          <h2>7. Data Security</h2>
           <p>
-            We may terminate or suspend Your access immediately without prior notice if You breach these Terms.
+            We take reasonable technical and organizational steps to protect your
+            information. However, no internet-based transmission or storage
+            system can be guaranteed to be completely secure.
           </p>
 
-          {/* Liability */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Limitation of Liability</h2>
-
+          <h2>8. Your Rights</h2>
           <p>
-            The total liability shall be limited to the amount paid by You or $100 if no purchase was made.
+            You may request access to, correction of, or deletion of your
+            personal information by contacting us directly.
           </p>
 
+          <h2>9. Third-Party Links</h2>
           <p>
-            We are not liable for indirect damages such as loss of profits, data, or business interruption.
+            Our website may contain links to third-party services or websites. We
+            are not responsible for their privacy practices or content.
           </p>
 
+          <h2>10. Policy Updates</h2>
           <p>
-            We do not guarantee uninterrupted or error-free service.
+            We may update this Privacy Policy from time to time. Continued use of
+            the website after changes are published will constitute acceptance of
+            the updated policy.
           </p>
 
-          {/* Governing Law */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Governing Law</h2>
-
+          <h2>11. Contact Us</h2>
           <p>
-            These Terms are governed by the laws of Haryana, India.
-          </p>
-
-          {/* Disputes */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Disputes Resolution</h2>
-
-          <p>
-            Any disputes should first be resolved informally by contacting the Company.
-          </p>
-
-          {/* Translation */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Translation Interpretation</h2>
-
-          <p>
-            In case of translation, the English version shall prevail.
-          </p>
-
-          {/* Changes */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Changes to These Terms</h2>
-
-          <p>
-            We may update these Terms at any time. Continued use means acceptance of updated terms.
-          </p>
-
-          {/* Contact */}
-          <h2 className="text-2xl font-bold mt-8 mb-4">Contact Us</h2>
-
-          <p>
-            If you have any questions, contact us:
+            For privacy-related questions, please contact:
             <br />
-            <strong>Email:</strong> 
-            <span className="text-orange-500"> info@aluempire.com</span>
+            <strong>Email:</strong>{" "}
+            <span className="text-orange-500">info@aluempire.com</span>
+            <br />
+            <strong>Phone:</strong>{" "}
+            <span className="text-orange-500">+91 9002690068</span>
           </p>
-
         </div>
       </div>
     </div>

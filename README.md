@@ -1,86 +1,68 @@
-# Paradise Furniture: GMC-Optimized Lead Generation Engine
+# Alu Empire Lead Funnel
 
-![Paradise Furniture](https://res.cloudinary.com/dfb0umklg/images/c_scale,w_170,h_42,dpr_1.5/f_auto,q_auto/v1/paradisefurniture.in/wp-content/uploads/elementor/thumbs/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74/cropped-paradise-logo-01-r30y1kxsgerwspiz2nqjfwq8tfpu2etrqeptunsg74.png?_i=AA)
+Alu Empire Lead Funnel is a Next.js application for showcasing aluminium
+skirting systems and capturing qualified purchase enquiries. The storefront is
+presented like a compact ecommerce experience, but submissions are routed into
+Google Sheets for offline follow-up, quotation, and fulfilment.
 
-A high-performance Next.js application tailored for luxury furniture sales. This application is uniquely architected to serve as a **Lead Generation Funnel** while structurally mimicking a traditional **E-Commerce Checkout Flow**. 
+## What It Does
 
-This dual-nature approach ensures strict technical compliance with Google Merchant Center (GMC) policies—which look for "Buy Now" capabilities and full offline payment structures—while seamlessly routing actual customer data straight to your CRM/Google Sheets for manual fulfillment.
+- Displays a curated Alu Empire product catalog from local data.
+- Generates static product detail pages with Product JSON-LD.
+- Captures customer details, product choice, and quantity through a checkout-style form.
+- Sends enquiry records to Google Sheets through the server route at `app/api/enquiry/route.ts`.
+- Includes company, contact, privacy, terms, and shipping/return pages for GMC-style compliance.
 
-## 🌟 Key Features
+## Stack
 
-- **Google Merchant Center (GMC) Compliance**:
-  - Full Server-Side Rendering (SSR) for instant crawler hydration.
-  - Injected `Product` JSON-LD Structured Data across product pages.
-  - Mandatory Compliance Pages actively routed globally (`/terms-of-service`, `/privacy-policy`, `/return-policy`, `/shipping-policy`).
-- **Simulated Checkout Flow**: "View & Quote" flows have been refactored into "Secure Checkout", capturing standard shipping metrics and Quantity via a standard eCommerce visual interface without requiring a live Stripe/Razorpay payment gateway.
-- **Analytics Ready**: Dedicated `/thank-you` page for crystal clear Google Analytics / Meta Pixel conversion tracking. 
-- **Google Sheets API Integration**: Server-secured, seamless dumping of all order inquiries directly into a private Google Workspace Spreadsheet.
-- **Premium Monochromatic Theme**: Overhauled UI featuring a highly professional Red, Black, and Light Grey palette.
+- Next.js `16.2.4`
+- React `19.2.4`
+- TypeScript
+- Tailwind CSS `4`
+- `lucide-react`
+- `googleapis`
 
----
-
-## 🛠️ Technology Stack
-
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Backend Integrations**: `googleapis` (Google Cloud Service Accounts)
-- **Typography**: Optimized loading via `next/font` (Geist & Geist Mono)
-
----
-
-## 📁 Project Architecture
+## Project Structure
 
 ```text
-├── app/
-│   ├── api/enquiry/route.ts       # Serverless function handling Google Sheets API
-│   ├── product/[id]/page.tsx      # Dynamic SSR Product Landing Pages
-│   ├── privacy-policy/page.tsx    # GMC Compliance
-│   ├── return-policy/page.tsx     # GMC Compliance
-│   ├── shipping-policy/page.tsx   # GMC Compliance
-│   ├── terms-of-service/page.tsx  # GMC Compliance
-│   ├── thank-you/page.tsx         # Conversion Tracking Goal Page
-│   ├── layout.tsx                 # Global Layout (injects Header/Footer)
-│   └── page.tsx                   # Main Landing Page / Catalog
-├── components/
-│   ├── Header.tsx                 # Global Navigation
-│   ├── Footer.tsx                 # Global Footer w/ Legal Links
-│   ├── LeadForm.tsx               # The Simulated Checkout Form Engine
-│   └── ProductGallery.tsx         # Interactive Client-side Image Gallery
-├── lib/
-│   └── data.ts                    # Local Data Store / Product Schemas
-└── .env.local                     # Hidden Keys (Google Credentials)
+app/
+  api/enquiry/route.ts            Server route that appends lead data to Google Sheets
+  product/[id]/page.tsx           Product landing page with JSON-LD and lead form
+  about-us/page.tsx               Company overview
+  contact-us/page.tsx             Contact details
+  privacy-policy/page.tsx         Privacy policy
+  terms-of-service/page.tsx       Terms of service
+  shipping-return-policy/page.tsx Canonical shipping and return policy
+  thank-you/page.tsx              Post-submission confirmation page
+  layout.tsx                      Shared layout with header and footer
+  page.tsx                        Homepage and catalog
+components/
+  Header.tsx
+  Footer.tsx
+  LeadForm.tsx
+  ProductGallery.tsx
+lib/
+  data.ts                         Product catalog and lookup helper
+next.config.ts                    Remote image config and legacy redirects
 ```
 
----
+## Environment Variables
 
-## 🚀 Getting Started Locally
-
-### 1. Installation
-
-Clone the repository and install the required dependencies:
-
-```bash
-git clone https://github.com/Abhisharma08/GMC-PF.git
-cd GMC-PF
-npm install
-```
-
-### 2. Configure Environment Variables
-
-Create a file named `.env.local` in the root directory. You must supply your Google Service Account credentials to allow the web app to edit your Google Sheet:
+Create `.env.local` in the project root with:
 
 ```env
 GOOGLE_CLIENT_EMAIL="your-service-account@your-project-id.iam.gserviceaccount.com"
-GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYour\nVery\nLong\nPrivate\nKey\nHere\n-----END PRIVATE KEY-----\n"
+GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYour\nPrivate\nKey\n-----END PRIVATE KEY-----\n"
 GOOGLE_SHEET_ID="your_google_sheet_id_here"
 ```
 
-> **Important Setup Step**: You must go to your target Google Sheet, click the "Share" button, and add the `GOOGLE_CLIENT_EMAIL` as an **Editor** to the spreadsheet.
+The service-account email must be granted editor access to the target Google
+Sheet.
 
-### 3. Setup Your Google Sheet Columns
+## Expected Google Sheet Columns
 
-The Google Sheets integration currently expects your target spreadsheet to have the following columns in exactly this order:
+The API appends values in this order:
+
 1. `Timestamp`
 2. `Name`
 3. `Email`
@@ -89,25 +71,22 @@ The Google Sheets integration currently expects your target spreadsheet to have 
 6. `Product`
 7. `Quantity`
 
-### 4. Run the Development Server
+## Local Development
 
 ```bash
+npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the outcome.
+Open `http://localhost:3000`.
 
----
+## Routing Notes
 
-## ☁️ Deployment
+- Canonical policy page: `/shipping-return-policy`
+- Legacy policy aliases: `/shipping-policy` and `/return-policy`
+- Legacy chair-template product URLs are redirected to the new Alu Empire slugs
 
-The application is fully optimized for **Vercel** deployment. 
-1. Connect your GitHub repository to Vercel.
-2. In the deployment settings, paste your **Environment Variables** exactly as they appear in your `.env.local` file. 
-3. *Note on Private Keys:* Make sure your `GOOGLE_PRIVATE_KEY` string accurately preserves the `\n` linebreaks if entered strictly as a string, or is pasted accurately if using the multi-line input on Vercel.
+## Deployment
 
----
-
-## 📄 License & Ownership
-
-Created exclusively for **Paradise Furniture**. All rights reserved.
+This project is set up for Vercel-style deployment. Add the same environment
+variables in the deployment provider before building.

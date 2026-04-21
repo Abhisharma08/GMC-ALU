@@ -16,8 +16,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Alu Empire Skirting",
-  description: "Curated collection of premium chairs.",
+  title: "Alu Empire | Aluminium Skirting Systems",
+  description:
+    "Premium aluminium skirting systems, LED profiles, and interior finishing solutions from Alu Empire.",
 };
 
 export default function RootLayout({
