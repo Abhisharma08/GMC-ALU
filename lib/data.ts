@@ -17,7 +17,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-screw-skirting-profile-01",
     title: "Aluminium Screw Skirting Profile",
     price: 575,
-    formattedPrice: "INR 575/piece",
+    formattedPrice: "₹575/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-line-skirting-profile-02",
     title: "Aluminium Line Skirting Profile",
     price: 1250,
-    formattedPrice: "INR 1250/piece",
+    formattedPrice: "₹1250/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-led-skirting-profile-80mm-03",
     title: "80 mm LED Aluminium Skirting Profile",
     price: 3500,
-    formattedPrice: "INR 3500/piece",
+    formattedPrice: "₹3500/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-stick-on-skirting-profile-04",
     title: "Aluminium Stick-On Skirting Profile",
     price: 600,
-    formattedPrice: "INR 600/piece",
+    formattedPrice: "₹600/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -101,7 +101,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-led-skirting-profile-100mm-05",
     title: "100 mm LED Aluminium Skirting Profile",
     price: 3500,
-    formattedPrice: "INR 3500/piece",
+    formattedPrice: "₹3500/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-screw-skirting-profile-75mm-06",
     title: "75 mm Aluminium Screw-On Skirting Profile",
     price: 475,
-    formattedPrice: "INR 475/piece",
+    formattedPrice: "₹475/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -146,7 +146,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-screw-skirting-profile-50mm-07",
     title: "50 mm Aluminium Screw-On Skirting Profile",
     price: 375,
-    formattedPrice: "INR 375/piece",
+    formattedPrice: "₹375/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -169,7 +169,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-stick-on-skirting-profile-80mm-08",
     title: "80 mm Aluminium Stick-On Skirting Profile",
     price: 700,
-    formattedPrice: "INR 700/piece",
+    formattedPrice: "₹700/piece",
     currency: "INR",
     availability: "In Stock",
     description:
@@ -191,7 +191,7 @@ export const PRODUCTS: Product[] = [
     id: "alu-led-profile-09",
     title: "Aluminium LED Profile",
     price: 3500,
-    formattedPrice: "INR 3500/piece",
+    formattedPrice: "₹3500/piece",
     currency: "INR",
     availability: "In Stock",
     description:
