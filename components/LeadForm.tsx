@@ -85,8 +85,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
       <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-5 sm:p-6 md:p-8">
         <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Secure Checkout</h3>
         <p className="text-gray-600 mb-6">
-          Enter your shipping details and an Alu Empire specialist will confirm
-          your order, delivery schedule, and offline payment steps.
+        Fill details our team will get back to you
         </p>
 
         <div className="space-y-4">
@@ -103,7 +102,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
               name="fullName"
               required
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF6A13] focus:border-transparent transition-all outline-none"
-              placeholder="John Doe"
+              placeholder="Your Name"
             />
           </div>
 
@@ -120,7 +119,7 @@ export default function LeadForm({ productTitle }: { productTitle: string }) {
               name="email"
               required
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF6A13] focus:border-transparent transition-all outline-none"
-              placeholder="john@example.com"
+              placeholder="Your Email"
             />
           </div>
 
